@@ -14,52 +14,37 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    /* Global typography + background */
-    html, body, [class*="st-"] {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    html, body, [class*="css"] {
+        font-family: Georgia, "Times New Roman", serif;
     }
 
     .stApp {
         background: #fff7fb;
     }
 
-    /* Hide Streamlit default top header, keep toolbar (for sidebar toggle) */
-    header[data-testid="stHeader"] {
-        display: none;
-    }
-
-    /* Sidebar styling */
     section[data-testid="stSidebar"] {
         background: #ffeaf4;
         border-right: 1px solid #f4c7da;
     }
 
-    section[data-testid="stSidebar"] > div {
-        padding-top: 1.2rem;
-    }
-
-    /* Headings */
     h1, h2, h3 {
         color: #a43d6c;
+        font-family: Georgia, "Times New Roman", serif;
     }
 
-    /* App title + subtitle */
     .app-title {
         font-size: 2.4rem;
         color: #a43d6c;
         margin-bottom: 0.2rem;
         font-weight: 700;
-        text-align: center;
     }
 
     .app-subtitle {
         color: #7d5a6b;
         margin-bottom: 1.2rem;
         font-size: 1rem;
-        text-align: center;
     }
 
-    /* Section headings */
     .section-title {
         font-size: 1.2rem;
         color: #a43d6c;
@@ -68,7 +53,6 @@ st.markdown("""
         font-weight: 700;
     }
 
-    /* Item cards */
     .item-card {
         background: white;
         border: 1px solid #f0c9da;
@@ -109,7 +93,6 @@ st.markdown("""
         margin-bottom: 0.6rem;
     }
 
-    /* Primary button */
     div.stButton > button {
         background: #d96a99;
         color: white;
@@ -124,15 +107,8 @@ st.markdown("""
         color: white;
     }
 
-    /* Select widgets */
     div[data-baseweb="select"] > div {
         border-radius: 10px;
-    }
-
-    /* Hide image fullscreen bar / button */
-    [data-testid="StyledFullScreenButton"],
-    [data-testid="stImage"] button[kind="icon"] {
-        display: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
