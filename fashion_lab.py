@@ -37,6 +37,10 @@ st.markdown("""
         border-right: 1px solid #f4c7da;
     }
 
+    section[data-testid="stSidebar"] > div {
+        padding-top: 1.2rem;
+    }
+
     /* Headings */
     h1, h2, h3 {
         color: #a43d6c;
