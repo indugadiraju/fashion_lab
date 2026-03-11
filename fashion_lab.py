@@ -142,7 +142,7 @@ st.markdown("""
 # ==================================================
 # DATA LOADING
 # ==================================================
-CSV_FILE = "fashion.csv"
+CSV_FILE = "fashion2.csv"
 
 
 @st.cache_data
