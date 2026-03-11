@@ -23,12 +23,9 @@ st.markdown("""
         background: #fff7fb;
     }
 
-    /* Hide Streamlit default top header / toolbar */
+    /* Hide Streamlit default top header, keep toolbar (for sidebar toggle) */
     header[data-testid="stHeader"] {
         display: none;
-    }
-    [data-testid="stToolbar"] {
-        display: none !important;
     }
 
     /* Sidebar styling */
@@ -133,7 +130,8 @@ st.markdown("""
     }
 
     /* Hide image fullscreen bar / button */
-    [data-testid="StyledFullScreenButton"] {
+    [data-testid="StyledFullScreenButton"],
+    [data-testid="stImage"] button[kind="icon"] {
         display: none !important;
     }
 </style>
