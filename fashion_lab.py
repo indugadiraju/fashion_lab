@@ -16,40 +16,46 @@ st.markdown("""
 <style>
     /* Global typography + background */
     html, body, [class*="st-"] {
-        font-family: "Didot", "Georgia", "Times New Roman", serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .stApp {
-        background: radial-gradient(circle at top left, #ffe2f2 0, #fff7fb 40%, #ffffff 100%);
+        background: #fff7fb;
+    }
+
+    /* Hide Streamlit default top header / toolbar */
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+    [data-testid="stToolbar"] {
+        display: none !important;
     }
 
     /* Sidebar styling */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #ffeaf4 0%, #ffe0f0 40%, #ffeaf4 100%);
+        background: #ffeaf4;
         border-right: 1px solid #f4c7da;
     }
 
     /* Headings */
     h1, h2, h3 {
         color: #a43d6c;
-        font-family: "Didot", "Georgia", "Times New Roman", serif;
-        letter-spacing: 0.03em;
     }
 
     /* App title + subtitle */
     .app-title {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
         color: #a43d6c;
         margin-bottom: 0.2rem;
         font-weight: 700;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
+        text-align: center;
     }
 
     .app-subtitle {
         color: #7d5a6b;
-        margin-bottom: 1.4rem;
+        margin-bottom: 1.2rem;
         font-size: 1rem;
+        text-align: center;
     }
 
     /* Section headings */
@@ -59,24 +65,15 @@ st.markdown("""
         margin-top: 1rem;
         margin-bottom: 0.6rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
     }
 
     /* Item cards */
     .item-card {
-        background: rgba(255, 255, 255, 0.96);
+        background: white;
         border: 1px solid #f0c9da;
-        border-radius: 16px;
-        padding: 12px 12px 10px 12px;
-        box-shadow: 0 10px 24px rgba(164, 61, 108, 0.08);
-        transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
-    }
-
-    .item-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 14px 32px rgba(164, 61, 108, 0.16);
-        border-color: #e69abb;
+        border-radius: 14px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(164, 61, 108, 0.06);
     }
 
     .item-name {
@@ -97,11 +94,11 @@ st.markdown("""
     .score-pill {
         display: inline-block;
         margin-top: 0.45rem;
-        padding: 0.22rem 0.65rem;
+        padding: 0.2rem 0.55rem;
         border-radius: 999px;
         background: #ffe3ef;
         color: #8e315f;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
         font-weight: 700;
     }
 
@@ -113,26 +110,27 @@ st.markdown("""
 
     /* Primary button */
     div.stButton > button {
-        background: linear-gradient(90deg, #e277a7, #d35f96);
+        background: #d96a99;
         color: white;
         border: none;
         border-radius: 999px;
-        padding: 0.6rem 1.3rem;
+        padding: 0.55rem 1rem;
         font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        box-shadow: 0 6px 14px rgba(190, 76, 123, 0.35);
     }
 
     div.stButton > button:hover {
-        background: linear-gradient(90deg, #d35f96, #c04784);
+        background: #c85c8c;
         color: white;
-        box-shadow: 0 10px 22px rgba(190, 76, 123, 0.4);
     }
 
     /* Select widgets */
     div[data-baseweb="select"] > div {
         border-radius: 10px;
+    }
+
+    /* Hide image fullscreen bar / button */
+    [data-testid="StyledFullScreenButton"] {
+        display: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
